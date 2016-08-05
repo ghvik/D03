@@ -4,7 +4,7 @@
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
 
-# Google's Python Class
+# Google's Python Classl
 # http://code.google.com/edu/languages/google-python-class/
 
 # Basic string exercises
@@ -25,8 +25,9 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-    # +++your code here+++
-    return
+    if count >= 10:
+        count = "many"
+    return "Number of donuts: " + str(count)
 
 
 # B. both_ends
@@ -35,8 +36,10 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-    # +++your code here+++
-    return
+    if len(s) < 2:
+        return ""
+    else:
+        return s[:2] + s[len(s) - 2:]
 
 
 # C. fix_start
@@ -49,8 +52,7 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    # +++your code here+++
-    return
+    return s[0:1] + s.replace(s[0:1], '*')[1:]
 
 
 # D. MixUp
@@ -61,8 +63,7 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-    # +++your code here+++
-    return
+    return b[:2] + a[2:]+ " " + a[:2] + b[2:]
 
 
 # Provided simple test() function used in main() to print
